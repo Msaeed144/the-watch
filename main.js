@@ -11,20 +11,17 @@ function showTime () {
         h = h - 12;
         session ="PM"
     }
+    if ( h == 12 && m>0 ){
+        session ="PM"
+    }
     if (h < 10) {
         h = `0${h}`
-    }else {
-        h = h;
     }
     if (m < 10) {
         m = `0${m}`
-    }else {
-        m = m;
     }
     if (s < 10) {
         s = `0${s}`
-    }else {
-        s = s;
     }
     let time = `${h} : ${m} : ${s} ${session}`;
     document.querySelector(".clock").innerText = time;
